@@ -3,10 +3,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
 </head>
 <body>
 	<h3>Capturar exceções com jquery</h3>
+	
+	<input type="text" id="txtValor" value="informar valor">
+	<input type="button" value="Testar Exceção" onclick="testarExcecao();">
 </body>
+
+<script type="text/javascript">
+	function testarExcecao() {
+// 		alert($('#txtValor').val());
+		var valorInformado = $('#txtValor').val();
+	}
+</script>
+
 </html>
