@@ -18,6 +18,18 @@
 	function testarExcecao() {
 // 		alert($('#txtValor').val());
 		var valorInformado = $('#txtValor').val();
+		
+		$.ajax({
+			method: "POST",
+			url: "capturarExcecao",//para qual servlet?
+			data: {"valorParam": valorInformado}
+		}).done(function(response) {//resposta ok - nenhum erro
+			alert("success");
+		}).fail(function(xhr, status) {//resposta erro - algum problema ocorreu
+			alert("Erro: " + xhr.responseText);
+// 		}).always(function(response) {
+// 			alert("complete");
+		});
 	}
 </script>
 
