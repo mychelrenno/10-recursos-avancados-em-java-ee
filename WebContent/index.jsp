@@ -30,6 +30,11 @@
 				<a href="pages/progressBar.jsp">Progress bar</a>
 			</td>
 		</tr>
+		<tr>
+			<td>
+				<a href="pages/fileUpload.jsp">File upload</a>
+			</td>
+		</tr>
 	</table>
 	
 </body>
