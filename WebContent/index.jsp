@@ -20,14 +20,16 @@
 				<a href="pages/acessoAoSistema.jsp">Acessar sistema</a>
 			</td>
 		</tr>
-<<<<<<< Updated upstream
-=======
 		<tr>
 			<td>
 				<a href="pages/paginaPai.jsp">Load JQuery</a>
 			</td>
 		</tr>
->>>>>>> Stashed changes
+		<tr>
+			<td>
+				<a href="pages/progressBar.jsp">Progress bar</a>
+			</td>
+		</tr>
 	</table>
 	
 </body>
