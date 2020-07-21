@@ -6,9 +6,9 @@
 	<meta charset="UTF-8">
 	<title>Barra de progresso</title>
 	
-	<link rel="stylesheet" href="../css/jquery-ui.css">
-	<script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
-	<script type="text/javascript" src="../js/jquery-ui.js"></script>
+	<link rel="stylesheet" href="../jquery-ui/jquery-ui.css">
+	<script type="text/javascript" src="../jquery/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="../jquery-ui/jquery-ui.js"></script>
 	
 	<style type="text/css">
 		#myProgress {

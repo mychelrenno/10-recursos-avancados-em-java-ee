@@ -5,7 +5,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>File upload</title>
-	<script type="text/javascript" src="../js/jquery-3.5.1.js"></script>
+	<script type="text/javascript" src="../jquery/jquery-3.5.1.js"></script>
 </head>
 <body>
 	<h3>File upload</h3>
