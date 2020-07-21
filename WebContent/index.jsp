@@ -35,6 +35,11 @@
 				<a href="pages/fileUpload.jsp">File upload</a>
 			</td>
 		</tr>
+		<tr>
+			<td>
+				<a href="pages/dataTable.jsp">Datatable jquery</a>
+			</td>
+		</tr>
 	</table>
 	
 </body>

@@ -1,6 +1,7 @@
 package br.com.javaEstudo.filter;
 
 import java.io.IOException;
+import java.sql.Connection;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;
@@ -13,11 +14,14 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
+import br.com.javaEstudo.connection.ConnectionDataBase;
 import br.com.javaEstudo.user.UserLogado;
 
 //@WebFilter(urlPatterns= {"/pages/acessoAoSistema.jsp"})
 @WebFilter(urlPatterns= {"/pages/*"})
 public class FilterAutenticacao implements Filter {
+	
+	private static Connection connection;
 
 	//faz alguma coisa quando a aplicação é derrubada
 	@Override
@@ -35,7 +39,7 @@ public class FilterAutenticacao implements Filter {
 		//retorna null quando não esteja logado
 		UserLogado userLogado = (UserLogado) session.getAttribute("usuario");
 		
-		System.out.println(req.getServletPath());
+//		System.out.println(req.getServletPath());
 		String urlParaAutenticar = req.getServletPath();
 		
 		if (userLogado == null && !urlParaAutenticar.equalsIgnoreCase("/pages/ServletAutenticacao")) {
@@ -47,13 +51,13 @@ public class FilterAutenticacao implements Filter {
 		//responsavel por fazer a execução do request e response
 		chain.doFilter(request, response);
 		
-		System.out.println("Interceptando");
+//		System.out.println("Interceptando");
 	}
 
 	//executa alguma coisa quando a aplicação é iniciada
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
-		
+		connection = ConnectionDataBase.getConnection();
 	}
 
 }
