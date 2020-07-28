@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.javaEstudo.dao.UsuarioDAO;
 import br.com.javaEstudo.dao.UsuarioDAOMySQL;
-import br.com.javaEstudo.usuarios.Usuario;
+import br.com.javaEstudo.models.Usuario;
 
 @WebServlet("/pages/carregarDadosDataTable")
 public class CarregarDadosDataTable extends HttpServlet {

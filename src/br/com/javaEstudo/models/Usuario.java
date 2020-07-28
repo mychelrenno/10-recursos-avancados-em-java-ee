@@ -1,4 +1,4 @@
-package br.com.javaEstudo.usuarios;
+package br.com.javaEstudo.models;
 
 public class Usuario {
 

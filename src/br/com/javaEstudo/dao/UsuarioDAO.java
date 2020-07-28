@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.javaEstudo.connection.ConnectionDataBase;
-import br.com.javaEstudo.usuarios.Usuario;
+import br.com.javaEstudo.models.Usuario;
 
 public class UsuarioDAO {
 
