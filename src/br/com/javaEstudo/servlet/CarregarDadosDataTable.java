@@ -13,13 +13,14 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import br.com.javaEstudo.dao.UsuarioDAO;
+import br.com.javaEstudo.dao.UsuarioDAOMySQL;
 import br.com.javaEstudo.usuarios.Usuario;
 
 @WebServlet("/pages/carregarDadosDataTable")
 public class CarregarDadosDataTable extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private UsuarioDAO usuarioDAO = new UsuarioDAO();
+	private UsuarioDAOMySQL usuarioDAO = new UsuarioDAOMySQL();
        
     public CarregarDadosDataTable() {
         super();
@@ -35,8 +36,8 @@ public class CarregarDadosDataTable extends HttpServlet {
 			handleRequest(request, response);
 			String draw = request.getParameter("draw");
 			
+			String data = "";
 			if (!usuarios.isEmpty()) {
-				String data = "";
 				int index = 1;
 				for (Usuario usuario: usuarios) {
 					data += "[\""+ usuario.getId() +"\", \""+ usuario.getLogin() +"\"]";
@@ -45,14 +46,15 @@ public class CarregarDadosDataTable extends HttpServlet {
 					}
 					index++;
 				}
-				json = "{"+
-						"\"draw\": "+ draw +","+
-						"\"recordsTotal\": "+ usuarios.size() +","+
-						"\"recordsFiltered\": "+ usuarios.size() +","+
-						"\"processing\": false,"+
-						"\"data\": ["+ data +"]"+ //fechamento do data
-						"}"; //fechamento do jason
 			}
+			
+			json = "{"+
+					"\"draw\": "+ draw +","+
+					"\"recordsTotal\": "+ usuarios.size() +","+
+					"\"recordsFiltered\": "+ usuarios.size() +","+
+					"\"processing\": false,"+
+					"\"data\": ["+ data +"]"+ //fechamento do data
+					"}"; //fechamento do jason
 		
 			response.setStatus(HttpServletResponse.SC_OK);
 			response.getWriter().write(json);

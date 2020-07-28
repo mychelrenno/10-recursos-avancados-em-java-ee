@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import br.com.javaEstudo.connection.ConnectionDataBase;
+import br.com.javaEstudo.connection.ConnectionDataBaseMySQL;
+import br.com.javaEstudo.connection.ConnectionDataBaseTwo;
 import br.com.javaEstudo.user.UserLogado;
 
 //@WebFilter(urlPatterns= {"/pages/acessoAoSistema.jsp"})
@@ -22,6 +24,8 @@ import br.com.javaEstudo.user.UserLogado;
 public class FilterAutenticacao implements Filter {
 	
 	private static Connection connection;
+	private static Connection connectionDataBaseTwo;
+	private static Connection connectionDataBaseMySQL;
 
 	//faz alguma coisa quando a aplicação é derrubada
 	@Override
@@ -58,6 +62,8 @@ public class FilterAutenticacao implements Filter {
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		connection = ConnectionDataBase.getConnection();
+		connectionDataBaseTwo = ConnectionDataBaseTwo.getConnection();
+		connectionDataBaseMySQL = ConnectionDataBaseMySQL.getConnection();
 	}
 
 }
