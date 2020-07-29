@@ -12,17 +12,17 @@
 	<table>
 		<tr>
 			<td>
-				<a href="pages/capturarExcecoes.jsp">Capturar exceções</a>
+				<a href="pages/catchException.jsp">Catch exception</a>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<a href="pages/acessoAoSistema.jsp">Acessar sistema</a>
+				<a href="pages/accessSystem.jsp">Access system</a>
 			</td>
 		</tr>
 		<tr>
 			<td>
-				<a href="pages/paginaPai.jsp">Load JQuery</a>
+				<a href="pages/fatherPage.jsp">Load JQuery</a>
 			</td>
 		</tr>
 		<tr>
@@ -38,6 +38,11 @@
 		<tr>
 			<td>
 				<a href="pages/dataTable.jsp">Datatable jquery</a>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<a href="pages/calendar.jsp">Calendar</a>
 			</td>
 		</tr>
 	</table>
