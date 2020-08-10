@@ -45,6 +45,11 @@
 				<a href="pages/calendar.jsp">Calendar</a>
 			</td>
 		</tr>
+		<tr>
+			<td>
+				<a href="pages/ganttView.jsp">GanttView</a>
+			</td>
+		</tr>
 	</table>
 	
 </body>
