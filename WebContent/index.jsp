@@ -50,6 +50,11 @@
 				<a href="pages/ganttView.jsp">GanttView</a>
 			</td>
 		</tr>
+		<tr>
+			<td>
+				<a href="pages/report.jsp">Reports</a>
+			</td>
+		</tr>
 	</table>
 	
 </body>

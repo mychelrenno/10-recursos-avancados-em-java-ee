@@ -18,7 +18,7 @@
 
 <script type="text/javascript">
 	function carregar() {
-		$("#mostrarPaginaFilha").load('paginaFilha.jsp');//load pagina em jquery
+		$("#mostrarPaginaFilha").load('childPage.jsp');//load pagina em jquery
 	}
 </script>
 

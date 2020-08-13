@@ -18,21 +18,29 @@ public class DAOUser {
 		connection = ConnectionDataBase.getConnection();
 	}
 	
-	public List<User> getUsuarios(String search) throws SQLException {
+	public List<User> getUsers(String search) {
 		List<User> usuarios = new ArrayList();
-		String sql = "select * from usuario where login like '%"+ search +"%'";
-		
-		PreparedStatement statement = connection.prepareStatement(sql);
-		ResultSet resultSet = statement.executeQuery();
-		
-		while (resultSet.next()) {
-			User u = new User();
-			u.setId(resultSet.getLong("id"));
-			u.setLogin(resultSet.getString("login"));
-			u.setPassword(resultSet.getString("password"));
-			usuarios.add(u);
+		try {
+			String sql = "select * from usuario";
+			
+			if (search != null && !search.isEmpty()) {
+				sql += "where login like '%" + search + "%'";
+			}
+
+			PreparedStatement statement = connection.prepareStatement(sql);
+			ResultSet resultSet = statement.executeQuery();
+
+			while (resultSet.next()) {
+				User u = new User();
+				u.setId(resultSet.getLong("id"));
+				u.setLogin(resultSet.getString("login"));
+				u.setPassword(resultSet.getString("password"));
+				usuarios.add(u);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
 		}
-		
 		return usuarios;
 	}
 }

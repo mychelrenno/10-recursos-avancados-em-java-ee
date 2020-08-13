@@ -34,7 +34,7 @@ public class ServletFileUpload extends HttpServlet {
 		try {
 			//usar variavel fileUpload para salvar no banco de dados
 			String fileUpload = request.getParameter("fileUpload");
-			System.out.println(fileUpload);//file em base 64
+//			System.out.println(fileUpload);//file em base 64
 			
 			//base64 para byte[]
 			String extensao = fileUpload.split(",")[0].split(";")[0].split("/")[1];
