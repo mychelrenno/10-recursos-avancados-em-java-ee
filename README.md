@@ -6,3 +6,5 @@ DataTables - https://datatables.net/
 FullCalendar - https://fullcalendar.io/
 <br>
 GanttView - https://github.com/thegrubbsian/jquery.ganttView
+<br>
+Jasperreports - http://jasperreports.sourceforge.net/api/index.html
